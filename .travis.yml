@@ -1,9 +1,10 @@
 language: "node_js"
 node_js:
-  - 9
+  - 14
 cache:
   directories:
     - node_modules
 script:
   -npm run test:unit
-  
+after_success:
+  - travis/push.sh
